@@ -7,9 +7,9 @@ const Footer = () => {
         <div className='flex justify-between items-center h-full'>
             
             <div>
-                    <h1 className='font-serif font-bold text-3xl cursor-pointer text-slate-100'><Link href='/'>EVENTONN</Link></h1>
+                    <h1 className='font-serif font-bold text-lg md:text-3xl cursor-pointer text-slate-100'><Link href='/'>EVENTONN</Link></h1>
             </div>
-            <div>
+            <div className='text-sm md:text-lg'>
                 <h4 className='text-slate-200'>
                     Created by Gaurav Singh
                 </h4>

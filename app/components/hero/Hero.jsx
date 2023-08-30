@@ -73,7 +73,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className='text-3xl md:text-5xl font-serif font-bold'>DISCOVER YOUR EVENTS</motion.h1>
+            className='text-2xl md:text-5xl font-serif font-bold'>DISCOVER YOUR EVENTS</motion.h1>
             <motion.p
             key={count}
             variants={pointVariant}
