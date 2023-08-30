@@ -18,7 +18,7 @@ const CategoryList = ({ eventOngoingData , clickCategory, city }) => {
     <div className=' mt-12 px-8 md:px-12'>
         <div className='flex flex-wrap gap-6 items-center justify-center'>
             {newData.map(item=> 
-                <div className='flex flex-col justify-center items-center'>
+                <div key={item.id} className='flex flex-col justify-center items-center'>
                     {/* image name date card  */}
                     <div>
                         <Image className='w-[25rem] h-[20rem]' src={item.image} alt={item.name} />
