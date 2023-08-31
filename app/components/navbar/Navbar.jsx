@@ -35,11 +35,11 @@ const Navbar = () => {
                     <div className='hidden md:block '>
                         <div className='flex items-center gap-6 font-serif font-medium text-lg text-slate-100'>
                             <Link className='hover:text-slate-400' href='/'>HOME</Link>
-                            <Link className='hover:text-slate-400' href='/'>ABOUT</Link>
-                            <Link className='hover:text-slate-400' href='/'>FAQ</Link>
+                            <Link className='hover:text-slate-400' href='/about'>ABOUT</Link>
+                            <Link className='hover:text-slate-400' href='/faq'>FAQ</Link>
 
                             {/* Sign in or Logo  */}
-                            <Link className='hover:text-slate-400' href='/'>SIGN IN</Link>
+                            <Link className='hover:text-slate-400' href='/signin'>SIGN IN</Link>
                         </div>
                     </div>
 

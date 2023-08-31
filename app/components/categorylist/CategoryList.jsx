@@ -1,4 +1,7 @@
+"use client"
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const CategoryList = ({ eventOngoingData , clickCategory, city }) => {
@@ -17,15 +20,21 @@ const CategoryList = ({ eventOngoingData , clickCategory, city }) => {
             )
         }
     } 
+    const router = useRouter()
+    const handleClick =(id)=> {
+        router.push(`/events/${id}`)
+    }
 
   return (
-    <div className=' mt-12 px-8 md:px-12'>
+    <div className=' mt-12 px-8 md:px-12 pb-12'>
         <div className='flex flex-wrap gap-6 items-center justify-center'>
+
+            {/* card  */}
             {newData.map(item=> 
-                <div key={item.id} className='flex flex-col justify-center items-center'>
+                <div key={item.id} className='flex flex-col justify-center items-center cursor-pointer' onClick={()=> handleClick(item.id)}>
                     {/* image name date card  */}
                     <div>
-                        <Image className='w-[25rem] h-[20rem]' src={item.image} alt={item.name} />
+                        <Image className='w-[25rem] h-[20rem] grayscale hover:grayscale-0 ' src={item.image} alt={item.name} />
                     </div>
                     <div className='w-[25rem] bg-[#1d1d1d] text-slate-200'>
                         <div className='text-center'>
