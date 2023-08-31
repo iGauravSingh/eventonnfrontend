@@ -2,17 +2,21 @@ import Image from 'next/image'
 import React from 'react'
 
 const CategoryList = ({ eventOngoingData , clickCategory, city }) => {
-    let newData ='all'
-    if(clickCategory !== 'all'){
-        newData = eventOngoingData.filter(data=> data.category === clickCategory && data.city === city)
+
+    let newData = eventOngoingData
+
+    if(clickCategory === 'all' && city === 'all'){
+        newData = eventOngoingData
+    } else if (clickCategory !== 'all' && city === 'all'){
+        newData = eventOngoingData.filter(item=> item.category === clickCategory)
+    } else if(clickCategory !== 'all' && city !== 'all'){
+        newData = eventOngoingData.filter(item => item.category === clickCategory && item.city === city)
         if(!newData.length){
-            return(
+            return (
                 <h3 className='text-center text-3xl font-serif font-bold'>No {clickCategory} event in {city}.</h3>
             )
         }
-    } else {
-        newData = eventOngoingData
-    }
+    } 
 
   return (
     <div className=' mt-12 px-8 md:px-12'>
@@ -39,3 +43,18 @@ const CategoryList = ({ eventOngoingData , clickCategory, city }) => {
 }
 
 export default CategoryList
+
+
+
+
+// let newData ='all'
+// if(clickCategory !== 'all'){
+//     newData = eventOngoingData.filter(data=> data.category === clickCategory && data.city === city)
+//     if(!newData.length){
+//         return(
+//             <h3 className='text-center text-3xl font-serif font-bold'>No {clickCategory} event in {city}.</h3>
+//         )
+//     }
+// } else {
+//     newData = eventOngoingData
+// }

@@ -36,7 +36,7 @@ const Selector = () => {
     const [click,setClick] = useState(false)
 
     
-    const [clickCategory, setClickCategory] = useState('art')
+    const [clickCategory, setClickCategory] = useState('all')
 
     const handleCityClick =(item)=>{
         setCity(item)
