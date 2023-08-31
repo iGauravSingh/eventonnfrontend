@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const CategoryList = ({ eventOngoingData , clickCategory, city }) => {
-
+    const router = useRouter()
     let newData = eventOngoingData
 
     if(clickCategory === 'all' && city === 'all'){
@@ -20,7 +20,7 @@ const CategoryList = ({ eventOngoingData , clickCategory, city }) => {
             )
         }
     } 
-    const router = useRouter()
+    
     const handleClick =(id)=> {
         router.push(`/events/${id}`)
     }
